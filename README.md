@@ -1,5 +1,5 @@
 # MERN-Stack
 
-## Backend - MongoDB - Express JS
+## Backend - MongoDB - Express - Node
 
-## Frontend - REact
+## Frontend - React
