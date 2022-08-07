@@ -4,15 +4,17 @@ import MyAppBar from './components/MyAppBar';
 import BasicCard from './components/BasicCard';
 import { Grid } from '@mui/material';
 import { useState,useEffect } from 'react';
-
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
 function App() {
 
-  const [exercises, setExercises] = useState([]);
+  const [exercises, setExercises] = useState(null);
 
 
 
   async function get_exercises(){
+    
     var requestOptions = {
       method: 'GET',
       redirect: 'follow'
@@ -45,14 +47,18 @@ function App() {
           justifyContent="center"
           alignItems="center"
         >
-               
-               
+          {exercises?
+                <>
                {exercises.map((i)=>(
                  <BasicCard duration={i.duration} description={i.description} id={i._id} />
-               ))}
-                
-            
-
+                 ))}
+                 </>
+                 :
+                 <>
+                 <Box>
+                    <CircularProgress />
+                 </Box>
+                 </>}
         </Grid>
 
 
