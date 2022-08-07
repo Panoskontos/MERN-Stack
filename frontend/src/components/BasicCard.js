@@ -20,7 +20,7 @@ export default function BasicCard(props) {
     <Card sx={{ minWidth: 275, m:2 }}>
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          Exercise {props.id}
+          {props.id}
         </Typography>
         
         <Typography variant="body2">

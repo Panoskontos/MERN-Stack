@@ -6,6 +6,7 @@ import { Grid } from '@mui/material';
 import { useState,useEffect } from 'react';
 import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 
 function App() {
 
@@ -14,7 +15,6 @@ function App() {
 
 
   async function get_exercises(){
-    
     var requestOptions = {
       method: 'GET',
       redirect: 'follow'
@@ -38,9 +38,11 @@ function App() {
        { console.log(exercises)}
         <MyAppBar />
         <br/>
-
-
-
+        <Typography variant='h3' display="flex"  justifyContent="center"
+          alignItems="center">
+          Exercises
+        </Typography>
+        <br/>
         <Grid
           container
           direction="row"
